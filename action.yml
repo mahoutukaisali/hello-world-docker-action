@@ -1,5 +1,5 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Batfish CI/CD'
+description: 'Batfish CI/CD in github Action'
 inputs:
   who-to-greet:  # id of input
     description: 'Who to greet'
@@ -10,6 +10,4 @@ outputs:
     description: 'The time we greeted you'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.who-to-greet }}
+  image: 'batfish/ci-base'
